@@ -27,3 +27,16 @@ show();
 //console.log(functionVar); // Throws ReferenceError
 //console.log(functionLet); // Throws ReferenceError
 //console.log(functionConst); // Throws ReferenceError
+
+{
+    var blockVar = "I'm a block-scoped var";
+    let blockLet = "I'm a block-scoped let";
+    const blockConst = "I'm a block-scoped const";
+    blockVar = "1";
+blockLet = "2";
+blockConst = "3";
+}
+
+console.log(blockVar); // Output: "I'm a global variable"
+console.log(blockLet); // Output: "I'm also global, but scoped with let"
+console.log(blockConst = "3");
